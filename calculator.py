@@ -3,9 +3,11 @@
 # Single number returns its value
 # Two numbers comma-delimited returns their sum
 # Multiple numbers comma-delimited returns their sum
+# Newline as delimiter
 
 def add(numbers):
     if not numbers:
         return 0
+    numbers = numbers.replace("\n", ",")
     parts = numbers.split(",")
     return sum(map(int, parts))
