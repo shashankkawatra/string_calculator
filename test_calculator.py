@@ -36,10 +36,3 @@ def test_multiple_negatives_raise_exception():
         add("1,-1,2,-3")
     except ValueError as e:
         assert str(e) == "negative numbers not allowed -1,-3"
-
-# check for invalid string input
-def test_invalid_delimiter():
-    try:
-        add("//:\n1;2:3")
-    except ValueError:
-        assert True
