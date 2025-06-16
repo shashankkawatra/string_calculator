@@ -5,6 +5,7 @@
 # Multiple numbers comma-delimited returns their sum
 # Newline as delimiter
 # Custom delimiter support
+# Negative numbers raise an exception
 
 def add(numbers):
     if not numbers:
@@ -18,4 +19,8 @@ def add(numbers):
         numbers = numbers.replace(custom_delimiter, ",")
     numbers = numbers.replace("\n", ",")
     parts = numbers.split(",")
-    return sum(map(int, parts))
+    nums = list(map(int, parts))
+    negatives = [str(n) for n in nums if n < 0]
+    if negatives:
+        return ValueError(f"negative numbers not allowed {','.join(negatives)}")
+    return sum(nums)
