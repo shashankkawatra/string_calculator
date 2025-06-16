@@ -7,3 +7,7 @@ def test_empty_string_returns_zero():
 # Single number returns its value
 def test_single_number_returns_its_value():
     assert add("1") == 1
+
+# Two numbers comma-delimited returns their sum
+def test_two_numbers_comma_delimited():
+    assert add("1,2") == 3
