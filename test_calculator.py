@@ -11,3 +11,7 @@ def test_single_number_returns_its_value():
 # Two numbers comma-delimited returns their sum
 def test_two_numbers_comma_delimited():
     assert add("1,2") == 3
+
+# Multiple numbers comma-delimited returns their sum
+def test_multiple_numbers_comma_delimited():
+    assert add("1,2,3,4") == 10
