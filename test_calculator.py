@@ -19,3 +19,7 @@ def test_multiple_numbers_comma_delimited():
 # Newline as delimiter
 def test_newline_as_delimiter():
     assert add("1\n2,3") == 6
+
+# Custom delimiter support
+def test_custom_delimiter():
+    assert add("//;\n1;2") == 3
